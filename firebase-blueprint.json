@@ -1,0 +1,55 @@
+{
+  "entities": {
+    "teams": {
+      "title": "Teams",
+      "description": "Free Fire Esports Teams",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string" },
+        "order": { "type": "number" },
+        "logoUrl": { "type": "string" },
+        "createdAt": { "type": "string" }
+      },
+      "required": ["name", "order"]
+    },
+    "rounds": {
+      "title": "Rounds",
+      "description": "Tournament Rounds / Matches",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "label": { "type": "string" },
+        "order": { "type": "number" },
+        "createdAt": { "type": "string" }
+      },
+      "required": ["label", "order"]
+    },
+    "results": {
+      "title": "Results",
+      "description": "Match performance per round and team",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "roundId": { "type": "string" },
+        "teamId": { "type": "string" },
+        "kill": { "type": "number" },
+        "placement": { "type": ["number", "null"] },
+        "booyah": { "type": "boolean" },
+        "updatedAt": { "type": "string" }
+      },
+      "required": ["roundId", "teamId", "kill"]
+    },
+    "settings": {
+      "title": "Settings",
+      "description": "Point calculation settings (document config)",
+      "type": "object",
+      "properties": {
+        "pointPerKill": { "type": "number" },
+        "booyahBonus": { "type": "number" },
+        "placementPoints": { "type": "object" }
+      },
+      "required": ["pointPerKill", "booyahBonus", "placementPoints"]
+    }
+  }
+}

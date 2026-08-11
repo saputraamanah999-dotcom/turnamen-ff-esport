@@ -1,0 +1,6 @@
+{
+  "name": "Free Fire Tournament Leaderboard & Admin",
+  "description": "Realtime broadcast leaderboard, top 3 podium, and admin dashboard for Free Fire esports tournaments.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

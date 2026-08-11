@@ -1,0 +1,38 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    function isAdmin() {
+      return request.auth != null;
+    }
+
+    match /teams/{teamId} {
+      allow read: if true;
+      allow create, update, delete: if isAdmin();
+    }
+
+    match /rounds/{roundId} {
+      allow read: if true;
+      allow create, update, delete: if isAdmin();
+    }
+
+    match /results/{resultId} {
+      allow read: if true;
+      allow create, update, delete: if isAdmin();
+    }
+
+    match /settings/{settingId} {
+      allow read: if true;
+      allow create, update, delete: if isAdmin();
+    }
+
+    match /killfeed/{feedId} {
+      allow read: if true;
+      allow create, update, delete: if isAdmin();
+    }
+
+    match /banners/{bannerId} {
+      allow read: if true;
+      allow create, update, delete: if isAdmin();
+    }
+  }
+}
