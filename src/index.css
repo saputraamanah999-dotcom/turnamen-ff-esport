@@ -1,0 +1,93 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Inter', sans-serif;
+    background-color: #08090d;
+    color: #e2e8f0;
+  }
+}
+
+.font-orbitron {
+  font-family: 'Orbitron', sans-serif;
+}
+
+.font-rajdhani {
+  font-family: 'Rajdhani', sans-serif;
+}
+
+/* Fire & Esports Glow Utility Classes */
+.glow-orange {
+  box-shadow: 0 0 20px rgba(249, 115, 22, 0.35);
+}
+
+.glow-gold {
+  box-shadow: 0 0 25px rgba(234, 179, 8, 0.45);
+}
+
+.glow-silver {
+  box-shadow: 0 0 20px rgba(203, 213, 225, 0.35);
+}
+
+.glow-bronze {
+  box-shadow: 0 0 20px rgba(217, 119, 6, 0.35);
+}
+
+.text-glow-orange {
+  text-shadow: 0 0 10px rgba(249, 115, 22, 0.6);
+}
+
+.text-glow-gold {
+  text-shadow: 0 0 12px rgba(250, 204, 21, 0.7);
+}
+
+.bg-fire-gradient {
+  background: linear-gradient(135deg, #f97316 0%, #dc2626 50%, #991b1b 100%);
+}
+
+.bg-gold-gradient {
+  background: linear-gradient(135deg, #fef08a 0%, #eab308 50%, #ca8a04 100%);
+}
+
+.bg-silver-gradient {
+  background: linear-gradient(135deg, #f8fafc 0%, #cbd5e1 50%, #64748b 100%);
+}
+
+.bg-bronze-gradient {
+  background: linear-gradient(135deg, #fde68a 0%, #d97706 50%, #78350f 100%);
+}
+
+.bg-dark-card {
+  background: rgba(18, 20, 28, 0.85);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.bg-broadcast-overlay {
+  background: linear-gradient(180deg, rgba(8, 9, 13, 0.95) 0%, rgba(15, 17, 26, 0.9) 100%);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.3s ease-out;
+}
+
+/* Custom Scrollbar for sleek dark look */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #08090d;
+}
+::-webkit-scrollbar-thumb {
+  background: #27272a;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #f97316;
+}

@@ -1,0 +1,15 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Allow all reads and writes for tournament data
+    // (tighten security rules for production as needed)
+    match /teams/{t} { allow read, write: if true; }
+    match /rounds/{r} { allow read, write: if true; }
+    match /results/{r} { allow read, write: if true; }
+    match /settings/{s} { allow read, write: if true; }
+    match /killfeed/{k} { allow read, write: if true; }
+    match /banners/{b} { allow read, write: if true; }
+    // WebRTC signaling needs open access for all viewers
+    match /livestream/{doc=**} { allow read, write: if true; }
+  }
+}
